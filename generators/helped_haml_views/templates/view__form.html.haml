@@ -1,8 +1,6 @@
 = form.error_messages
 
 <% attributes.each do |attribute| -%>
-%p
-  = form.label :<%= attribute.name %>
-  %br
   = form.<%= attribute.field_type %> :<%= attribute.name %>
 <% end -%>
+  = form.submit

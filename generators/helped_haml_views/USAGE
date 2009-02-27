@@ -1,0 +1,5 @@
+Description:
+    Generates the four view fiels for the RESTful design
+
+Examples:
+    `./script/generate haml_views Post`

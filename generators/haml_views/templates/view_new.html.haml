@@ -1,6 +1,8 @@
-%h1 New <%= singular_name %>
+%h1
+  New <%= singular_name %>
 
-- labelled_form_for(@<%= singular_name %>) do |f|
+- form_for(@<%= singular_name %>) do |f|
   = render :partial => "<%= plural_name %>/form", :object => f
+  %p= f.submit "Create"
 
-= link_to t(:"actions.back"), <%= plural_name %>_path
+= link_to 'Back', <%= plural_name %>_path
