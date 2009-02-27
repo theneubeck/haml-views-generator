@@ -1,0 +1,64 @@
+h1. Haml Views generator
+
+Very simple generator for generating haml views for existing models
+  
+h2. Usage
+
+Just take a model and generate the views
+
+  script/generate haml_views <ModelName>
+  
+Example
+
+  script/generate haml_views User
+        exists  app/models/
+        exists  app/controllers/
+        exists  app/helpers/
+        exists  app/views/users
+        create  app/views/users/index.html.haml
+        create  app/views/users/show.html.haml
+        create  app/views/users/new.html.haml
+        create  app/views/users/edit.html.haml
+        create  app/views/users/_form.html.haml
+
+
+Notes
+
+A nice way of using it is to combine with scaffold_generators:
+
+  script/generate rspec_scaffold Note
+      exists  app/models/
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/notes
+      create  spec/controllers/
+      create  spec/models/
+      create  spec/helpers/
+      create  spec/fixtures/
+      create  spec/views/notes
+      create  spec/controllers/notes_routing_spec.rb
+      create  spec/controllers/notes_controller_spec.rb
+      create  app/controllers/notes_controller.rb
+      create  spec/helpers/notes_helper_spec.rb
+      create  app/helpers/notes_helper.rb
+      create  app/views/notes/index.html.erb
+      create  app/views/notes/show.html.erb
+      create  app/views/notes/new.html.erb
+      create  app/views/notes/edit.html.erb
+      create  app/models/note.rb
+      create  spec/fixtures/notes.yml
+      create  spec/models/note_spec.rb
+      create  spec/views/notes/edit.html.erb_spec.rb
+      create  spec/views/notes/index.html.erb_spec.rb
+      create  spec/views/notes/new.html.erb_spec.rb
+      create  spec/views/notes/show.html.erb_spec.rb
+      exists  db/migrate
+      create  db/migrate/20090227091659_create_notes.rb
+       route  map.resources :notes
+
+  rm -rf app/views/notes/*
+  
+  rake db:migrate
+  
+  script/generate haml_views Note
+  
