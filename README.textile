@@ -1,7 +1,12 @@
 h1. Haml Views generator
 
 Very simple generator for generating haml views for existing models
-  
+
+
+h2. Installation
+
+  script/plugin install git://github.com/theneubeck/haml-views-generator.git
+
 h2. Usage
 
 Just take a model and generate the views
@@ -64,7 +69,7 @@ The generator looks up the attributes names from the db, so you'll need to migra
 
 h1. Haml Views generator
 
-A version of the generator that uses the form helpers from "mange":http://github.com/mange
+A version of the generator that uses the "labelled_form_helper":http://github.com/Mange/labelling_form_builder/tree/master from "mange":http://github.com/mange
 
 
 h2. Usage
